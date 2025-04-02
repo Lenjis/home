@@ -9,9 +9,9 @@ weight: 3
 
 I major in Aircraft Designing and Engineering currently. My acadamic interests includes:
 
-- Aircraft design (especially RC model design)
+- Aircraft design (RC model)
 - Machine learning
-- Mechanical design (CAM) technologies
+- Computational Fluid Dynamics (CFD)
 
 ## _About Webpage_
 
