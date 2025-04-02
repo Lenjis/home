@@ -1,82 +1,48 @@
 ---
-layout: post
-title: "WSL2配置CUDA加速的深度学习Docker环境"
-date: 2025-04-02 16:29:30 +0800
-categories: [WSL2, CUDA, Docker, 深度学习]
-tags: [WSL2, CUDA, Docker, 深度学习]
+title: "Github中的markdown渲染数学公式的注意事项"
+date: 2025-04-02 16:35:24 +0800
+tags: [GitHub, Workflow]
+style: fill
+color: primary
+description: 
 ---
 
-> 基于[Eric Moore的文章](https://eric-gitta-moore.github.io/2023/full-stack-development-and-deep-learning-tensorflow-pytorch-gpu-acceleration-using-nvidia-docker-in-wsl2/)和官方文档修改
+在上传至Github的`markdown`文件中，输入公式要特别注意，否则可能会导致在本地渲染成功，而github网页预览时渲染失败的问题。
 
-## （可选）迁移WSL2虚拟磁盘
+例如
 
-```shell
-wsl --shutdown
-wsl --export Debian C:\WSL2\Debian\ext4.vhdx --vhd
-wsl --unregister Debian
-wsl --import-in-place Debian C:\WSL2\Debian\ext4.vhdx
+```markdown
+first-order-accurate
+$$(\frac{\partial u}{\partial x})_{i,j}=\frac{u_{i+1,j}-u_{i,j}}{\Delta x}+O(\Delta x)
+$$
 ```
 
-## 安装Docker
+在本地vscode预览正常，应为
 
-安装依赖
+first-order-accurate
 
-```shell
-apt update
-apt install ca-certificates curl gnupg
+$$(\frac{\partial u}{\partial x}) _{i,j}=\frac{u _{i+1,j}-u _{i,j}}{\Delta x}+O(\Delta x)
+$$
+
+在Github网页预览时会渲染失败：
+
+first-order-accurate
+$$(\frac{\partial u}{\partial x})_{i,j}=\frac{u_{i+1,j}-u_{i,j}}{\Delta x}+O(\Delta x)
+$$
+
+此时需要将所有的下标（如`_{i,j}`）前添加空格，并在行间公式前后添加空行：
+
+```markdown
+first-order-accurate
+
+$$(\frac{\partial u}{\partial x}) _{i,j}=\frac{u _{i+1,j}-u _{i,j}}{\Delta x}+O(\Delta x)
+$$
+
 ```
 
-下载并添加Docker的GPG公钥
+即可恢复正常渲染。
 
-```shell
-sudo install -m 0755 -d /etc/apt/keyrings
-curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
-sudo chmod a+r /etc/apt/keyrings/docker.gpg
-```
+first-order-accurate
 
-添加docker源（使用NJU镜像）
-
-```shell
-echo \
-  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://mirror.nju.edu.cn/docker-ce/linux/debian \
-  "$(. /etc/os-release && echo "$VERSION_CODENAME")" stable" | \
-  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-```
-
-安装Docker
-
-```shell
-apt update
-apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
-```
-
-## 安装NVIDIA Container Tookit
-
-配置生产目录
-
-```shell
-curl -fsSL https://nvidia.github.io/libnvidia-container/gpgkey | sudo gpg --dearmor -o /usr/share/keyrings/nvidia-container-toolkit-keyring.gpg \
-  && curl -s -L https://nvidia.github.io/libnvidia-container/stable/deb/nvidia-container-toolkit.list | \
-    sed 's#deb https://#deb [signed-by=/usr/share/keyrings/nvidia-container-toolkit-keyring.gpg] https://#g' | \
-    sudo tee /etc/apt/sources.list.d/nvidia-container-toolkit.list
-```
-
-安装nvidia-container-toolkit（[nvidia-container-toolkit和nvidia-docker2的区别](https://github.com/NVIDIA/nvidia-docker/issues/1268#issuecomment-632692949)）
-
-```shell
-apt update
-apt install nvidia-container-toolkit 
-```
-
-配置nvidia-ctk
-
-```shell
-nvidia-ctk runtime configure --runtime=docker
-systemctl restart docker
-```
-
-## 附录：Docker和虚拟机的区别
-
-![VM_vs_Docker](image/CUDA_4_WSL2/VM_vs_Docker.png)
-
-区分容器和基于 hypervisor 的虚拟机（ vm ）很重要。 vm 允许操作系统的多个副本，甚至多个不同的操作系统共享一台机器。每个虚拟机可以承载和运行多个应用程序。相比之下，容器被设计成虚拟化单个应用程序，并且部署在主机上的所有容器共享一个操作系统内核，如图所示。通常，容器运行速度更快，以裸机性能运行应用程序，并且更易于管理，因为进行操作系统内核调用没有额外的开销。
+$$(\frac{\partial u}{\partial x}) _{i,j}=\frac{u _{i+1,j}-u _{i,j}}{\Delta x}+O(\Delta x)
+$$
