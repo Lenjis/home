@@ -1,10 +1,9 @@
 ---
 title: "WSL2配置CUDA加速的深度学习Docker环境"
-date: 2025-04-02 16:29:30 +0800
 tags: [GitHub, Workflow]
 style: fill
 color: primary
-description: 
+description: 基于[Eric Moore的文章](https://eric-gitta-moore.github.io/2023/full-stack-development-and-deep-learning-tensorflow-pytorch-gpu-acceleration-using-nvidia-docker-in-wsl2/)和官方文档修改
 ---
 
 > 基于[Eric Moore的文章](https://eric-gitta-moore.github.io/2023/full-stack-development-and-deep-learning-tensorflow-pytorch-gpu-acceleration-using-nvidia-docker-in-wsl2/)和官方文档修改
