@@ -1,8 +1,8 @@
 ---
 title: "Github中的markdown渲染数学公式的注意事项"
 tags: [GitHub, Workflow]
-style: fill
-color: primary
+style: 
+color: info
 description: 在上传至Github的`markdown`文件中，输入公式要特别注意，否则可能会导致在本地渲染成功，而github网页预览时渲染失败的问题。
 ---
 
