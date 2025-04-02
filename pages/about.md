@@ -5,10 +5,26 @@ permalink: /about/
 weight: 3
 ---
 
-# **About Me**
+## _About Me_
 
-Hi I am **{{ site.author.name }}** :wave:,<br>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+I major in Aircraft Designing and Engineering currently. My acadamic interests includes:
+
+- Aircraft design (especially RC model design)
+- Machine learning
+- Mechanical design (CAM) technologies
+
+## _About Webpage_
+
+This is my first (formally) blog webpage, which is deployed by Jekyll.
+
+I hope this site includes my:
+
+- basic information
+- projects and research 
+- strange thoughts or ideas
+- etc.
+
+Feel free to contact me via e-mail and so on!
 
 <div class="row">
 {% include about/skills.html title="Programming Skills" source=site.data.programming-skills %}
