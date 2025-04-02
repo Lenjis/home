@@ -1,7 +1,23 @@
-- name: Adobe Photoshop
-  percentage: 95
+- name: CATIA
+  percentage: 60
   color: info
 
-- name: Adobe Illustrator
-  percentage: 90
+- name: SolidWorks
+  percentage: 70
   color: success
+
+- name: AutoCAD
+  percentage: 75
+  color: warning
+
+- name: MATLAB
+  percentage: 45
+  color: primary
+
+- name: Ansys
+  percentage: 45
+  color: danger
+
+- name: OpenVSP
+  percentage: 90
+  color: secondary
