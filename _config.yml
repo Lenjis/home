@@ -14,7 +14,7 @@ plugins:
   - jemoji
 
 kramdown:
-  math_engine: MathJax
+  math_engine: null
 
 ### Navbar Settings ###
 nav_exclude: # The following paths are excluded from navbar

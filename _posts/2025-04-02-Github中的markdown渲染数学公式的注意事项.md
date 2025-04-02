@@ -6,7 +6,7 @@ color: success # primary / secondary / success / danger / warning / info / light
 description: 在上传至Github的`markdown`文件中，输入公式要特别注意，否则可能会导致在本地渲染成功，而github网页预览时渲染失败的问题。
 ---
 
-{% include head.html %}
+{% include latex.html %}
 
 在上传至Github的`markdown`文件中，输入公式要特别注意，否则可能会导致在本地渲染成功，而github网页预览时渲染失败的问题。
 
