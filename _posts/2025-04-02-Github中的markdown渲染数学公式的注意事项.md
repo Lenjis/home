@@ -22,13 +22,15 @@ $$
 
 first-order-accurate
 
-$$(\frac{\partial u}{\partial x}) _{i,j}=\frac{u _{i+1,j}-u _{i,j}}{\Delta x}+O(\Delta x)
+$$
+(\frac{\partial u}{\partial x}) _{i,j}=\frac{u _{i+1,j}-u _{i,j}}{\Delta x}+O(\Delta x)
 $$
 
 在Github网页预览时会渲染失败：
 
 first-order-accurate
-$$(\frac{\partial u}{\partial x})_{i,j}=\frac{u_{i+1,j}-u_{i,j}}{\Delta x}+O(\Delta x)
+$$
+(\frac{\partial u}{\partial x})_{i,j}=\frac{u_{i+1,j}-u_{i,j}}{\Delta x}+O(\Delta x)
 $$
 
 此时需要将所有的下标（如`_{i,j}`）前添加空格，并在行间公式前后添加空行：
@@ -45,5 +47,6 @@ $$
 
 first-order-accurate
 
-$$(\frac{\partial u}{\partial x}) _{i,j}=\frac{u _{i+1,j}-u _{i,j}}{\Delta x}+O(\Delta x)
+$$
+(\frac{\partial u}{\partial x}) _{i,j}=\frac{u _{i+1,j}-u _{i,j}}{\Delta x}+O(\Delta x)
 $$
