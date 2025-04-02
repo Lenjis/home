@@ -75,8 +75,8 @@ nvidia-ctk runtime configure --runtime=docker
 systemctl restart docker
 ```
 
-## 附录：Docker和虚拟机的区别
+## 附：Docker和虚拟机的区别
 
-![VM_vs_Docker](\assets\images\VM_vs_Docker.png)
+![VM_vs_Docker](/assets/images/VM_vs_Docker.png)
 
 区分容器和基于 hypervisor 的虚拟机（ vm ）很重要。 vm 允许操作系统的多个副本，甚至多个不同的操作系统共享一台机器。每个虚拟机可以承载和运行多个应用程序。相比之下，容器被设计成虚拟化单个应用程序，并且部署在主机上的所有容器共享一个操作系统内核，如图所示。通常，容器运行速度更快，以裸机性能运行应用程序，并且更易于管理，因为进行操作系统内核调用没有额外的开销。
