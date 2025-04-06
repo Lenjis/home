@@ -1,7 +1,7 @@
 ### Site Settings ###
 title: Brian's Blog
 description: >-
-  Choose life. Choose a job.
+  Choose life.
 baseurl: "/home" # Change to empty quotes if you are hosting your site at <your-username>.github.io directly
 repository: lenjis/lenjis.github.io # Change to <your-username>/<your-username>.github.io (or remove it if you don't need remote projects)
 remote_theme: yousinix/portfolYOU
@@ -77,13 +77,13 @@ defaults:
   - scope:
       path: ""
       type: "projects"
-    values:
-      layout: "page"
+      values:
+        layout: "page"
   - scope:
       path: ""
       type: "posts"
-    values:
-      comments: false # Set to true to enable disqus comments
+      values:
+        comments: true # Set to true to enable disqus comments
 
 ### Exclude from processing ###
 exclude:
