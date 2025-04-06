@@ -15,12 +15,12 @@ I major in Aircraft Designing and Engineering currently. My acadamic interests i
 
 ## _About Webpage_
 
-This is my first (formally) blog webpage, which is deployed by Jekyll.
+The blog is deployed by Jekyll.
 
 I hope this site includes my:
 
 - basic information
-- projects and research 
+- projects and research
 - strange thoughts or ideas
 - etc.
 
