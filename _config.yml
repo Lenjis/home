@@ -13,8 +13,8 @@ open_new_tab: true # Opens external URLs in new tab (works for posts, projects a
 plugins:
   - jemoji
 
-kramdown:
-  math_engine: null
+# kramdown:
+#   math_engine: null
 
 ### Navbar Settings ###
 nav_exclude: # The following paths are excluded from navbar
