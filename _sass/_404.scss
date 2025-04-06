@@ -59,7 +59,7 @@
 /* animations */
 
 .wheel {
-  animation: wheel-rotate 6s ease infinite;
+  animation: wheel-rotate 3s ease infinite;
   transform-origin: center;
   transform-box: fill-box;
 }
@@ -162,7 +162,7 @@
 }
 
 #bike {
-  animation: bike-anim 1s ease infinite;
+  animation: bike-anim 3s ease infinite;
 }
 
 @keyframes bike-anim {
