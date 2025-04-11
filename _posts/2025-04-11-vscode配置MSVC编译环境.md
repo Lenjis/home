@@ -43,7 +43,6 @@ VScode按`F1`输入`Open User Settings (JSON)`,将上一步`$env:include`输出�
 将修改后的路径加入文件中`C_Cpp.default.systemIncludePath`例如：
 
 ```json
-    ...
     "C_Cpp.default.systemIncludePath": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.43.34808\\include",
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Auxiliary\\VS\\include",
@@ -52,8 +51,7 @@ VScode按`F1`输入`Open User Settings (JSON)`,将上一步`$env:include`输出�
         "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22621.0\\shared",
         "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22621.0\\winrt",
         "C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.22621.0\\cppwinrt"
-    ],
-    ...
+    ]
 ```
 
 ## CMake配置
