@@ -22,7 +22,7 @@ VS提供了控制台，用于启动带环境变量的开发环境。
 code
 ```
 
-进入VScode按`F1`输入`terminal`打开终端，输入`$env:include`，如果出现大量VS的环境目录例如：
+进入VScode按`F1`输入`terminal`打开终端，输入`$env:include`，如果出现环境目录例如：
 
 ```batch
 C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.43.34808\include;C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Auxiliary\VS\include;C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt;C:\Program Files (x86)\Windows Kits\10\\include\10.0.22621.0\\um;C:\Program Files (x86)\Windows Kits\10\\include\10.0.22621.0\\shared;C:\Program Files (x86)\Windows Kits\10\\include\10.0.22621.0\\winrt;C:\Program Files (x86)\Windows Kits\10\\include\10.0.22621.0\\cppwinrt
@@ -34,11 +34,11 @@ C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.
 
 为了实现直接自动导入环境变量，需要将上述环境变量导入VScode的`include path`中。
 
-VScode按`F1`输入`Open User Settings (JSON)`,将上一步`$env:include`输出内容做如下修改：
+VScode按`F1`输入`Open User Settings (JSON)`,将上一步`$env:include`输出内容改为JSON格式：
 
-1. 在分号处断开，每一个目录加引号
-2. 每个目录用逗号隔开，并换行
-3. 反斜杠`\`改为双写
+1. 分号改为逗号，每一个目录加双引号
+2. 每个目录并换行
+3. `\`双写
 
 将修改后的路径加入文件中`C_Cpp.default.systemIncludePath`例如：
 
