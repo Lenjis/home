@@ -15,6 +15,7 @@
   <main class="flex-shrink-0 container mt-5">
     {% include navbar.html %}
     {{ content }}
+    <p>这是一个测试文本，用于验证修改是否有效。</p>
   </main>
   {% include footer.html %}
 
@@ -22,7 +23,10 @@
   {% include scripts.html %}
 
   {%- if site.buymeacoffee.enabled == true -%}
-    <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="{{ site.buymeacoffee.username }}" data-description="{{ site.buymeacoffee.description }}" data-message="{{ site.buymeacoffee.message }}" data-color="{{ site.buymeacoffee.color }}" data-position="Right" data-x_margin="16" data-y_margin="16"></script>
+    <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js"
+      data-id="{{ site.buymeacoffee.username }}" data-description="{{ site.buymeacoffee.description }}"
+      data-message="{{ site.buymeacoffee.message }}" data-color="{{ site.buymeacoffee.color }}" data-position="Right"
+      data-x_margin="16" data-y_margin="16"></script>
   {%- endif -%}
 </body>
 
