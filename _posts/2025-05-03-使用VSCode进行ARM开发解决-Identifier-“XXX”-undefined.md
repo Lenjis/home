@@ -1,9 +1,9 @@
 ---
-title: "VSCode ARM开发解决 Identifier “XXX” undefined问题"
+title: "使用VSCode进行ARM开发解决Identifier “XXX” undefined"
 tags: [VSCode, ARM, CN]
 style: border # fill / border
 color: info # primary / secondary / success / danger / warning / info / light / dark
-description: 
+description: 无法忍受μVision的远古界面
 ---
 
 最近在写飞行控制课程代码时，VSCode中会大量报错
