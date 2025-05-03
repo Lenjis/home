@@ -12,7 +12,7 @@ description: 无法忍受μVision的远古界面
 
 查找网上的解决方案大多是解决代码本身的问题，但是编译器没有给出类似的报错，说明是`Intellisence`出了问题。
 
-打开`C/C++: Edit configurations (UI)`，在默认的`Win32`下新建一个Configuration，`IntelliSense mode`选择`windows-clang-arm`，然后在工具栏选择对应的`Configuration`，问题解决。
+打开`C/C++: Edit configurations (UI)`，在默认的`Win32`下新建一个Configuration，`IntelliSense mode`选择`windows-clang-arm`，然后在工具栏选择对应的Configuration，问题解决。
 ![](https://lenjis.github.io/assets/images/configuration.png)
 
 如果右键也无法找到定义，需要修改`C/C++`插件的`include path`设置，添加自己项目中的库文件目录。
